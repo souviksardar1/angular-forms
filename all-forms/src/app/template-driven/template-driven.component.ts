@@ -15,7 +15,7 @@ export class TemplateDrivenComponent {
     adrs : '',
     cty : '',
     state : ''
-  }
+  };
   // FormDataSubmit(data : NgForm){
   // }
   FormDataSubmit(){
