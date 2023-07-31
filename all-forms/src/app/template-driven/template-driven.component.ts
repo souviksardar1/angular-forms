@@ -8,6 +8,7 @@ import { NgForm } from '@angular/forms';
 })
 export class TemplateDrivenComponent {
 
+  submittedSuccessfully = false;
   @ViewChild('fData') dataFromForm : NgForm;
   dataInForm = {
     mailId : '',
@@ -24,6 +25,7 @@ export class TemplateDrivenComponent {
     this.dataInForm.cty = this.dataFromForm.value.city;
     this.dataInForm.state = this.dataFromForm.value.state;
 
+    this.submittedSuccessfully = true;
     this.dataFromForm.reset();
   }
   
