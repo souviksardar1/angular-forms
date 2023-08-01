@@ -1,1 +1,7 @@
-<app-template-driven></app-template-driven>
+<button (click) = "LoadTemplateDrivenForm()">Load Template Driven Form</button> &nbsp;
+<button (click) = "LoadReactiveForm()" >Load Reactive Form</button>
+
+<app-template-driven *ngIf="templateFormLoaded"></app-template-driven>
+
+
+<app-reactive-form *ngIf="reactiveFormLoaded"></app-reactive-form>

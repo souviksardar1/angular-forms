@@ -1,0 +1,36 @@
+<div class="col-md-6 align-items-center" style="height: 250px">
+    <h3>Reactive form</h3>
+    <hr>
+    <form class="row g-1" [formGroup] = "myForm" (ngSubmit) = "SubmitReactiveForm()">
+      <div class="col-md-12" >
+        <label for="inputEmail4" class="form-label fw-bold">User Name</label>
+        <input type="email" class="form-control" id="username" formControlName="username">
+        <!-- <span *ngIf = "!mail.valid && mail.touched">Entered mail id is not valid!</span> -->
+      </div>
+      <div class="col-md-12" >
+        <label for="inputEmail4" class="form-label fw-bold">Password</label>
+        <input type="email" class="form-control" id="password" formControlName="password">
+        <!-- <span *ngIf = "!mail.valid && mail.touched">Entered mail id is not valid!</span> -->
+      </div>
+      <div class="col-md-12" >
+        <label for="inputEmail4" class="form-label fw-bold">Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+        <span *ngIf="!myForm.controls['email'].valid && 
+        myForm.controls['email'].touched">
+            Pls enter valid email to proceed further</span>
+      </div>
+      
+      <div class="col-md-4">
+        <label for="inputEmail4" class="form-label fw-bold">Gender : </label> <br>
+        <input type="radio" id="gender" formControlName="gender" value="male">
+          <label for="html">Male</label>
+          <input type="radio" id="gender" formControlName="gender" value="female">
+          <label for="css">Female</label>
+      </div>
+      <br><br> <br><br>
+      <div class="col-12" >
+        <button type="submit" class="btn btn-primary" [disabled] = "!myForm.valid">Submit Reactive form</button>
+      </div>
+    </form>
+    <br><br>
+    </div>
