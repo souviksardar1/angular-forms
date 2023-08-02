@@ -7,6 +7,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  name : string = "Souvik";
   templateFormLoaded : boolean = false;
   reactiveFormLoaded : boolean = false;
 

@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ReduceLengthPipe } from './pipes/shortlength.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     TemplateDrivenComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    ReduceLengthPipe
   ],
   imports: [
     BrowserModule,
